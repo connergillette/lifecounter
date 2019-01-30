@@ -18,239 +18,228 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="244" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-DL-7WM">
-                                <rect key="frame" x="16" y="34" width="342" height="613"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lye-QV-SCJ">
+                                <rect key="frame" x="17" y="49" width="342" height="344"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcC-Ki-PZz">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="308"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-RI-nEA">
+                                        <rect key="frame" x="20" y="20" width="135" height="137"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-1e-pgc">
-                                                <rect key="frame" x="20" y="151" width="135" height="137"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccb-Q0-qni">
-                                                        <rect key="frame" x="20" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="s21-TF-zRk"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31K-i7-6SS">
-                                                        <rect key="frame" x="20" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="2Ph-bd-wWE"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ub-kA-VPA">
-                                                        <rect key="frame" x="58" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="d8V-3k-Md7"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-S3-Yl1">
-                                                        <rect key="frame" x="58" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Osu-ea-m9P"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 3: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbL-F0-vRE">
-                                                        <rect key="frame" x="20" y="20" width="95" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="137" id="dxC-gS-EwA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-RI-nEA">
-                                                <rect key="frame" x="20" y="20" width="135" height="137"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-B1-zhK">
-                                                        <rect key="frame" x="20" y="20" width="95" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYG-wZ-TRd">
-                                                        <rect key="frame" x="33" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="zxi-BX-lOL"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-K7-XRv">
-                                                        <rect key="frame" x="33" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Sao-ku-TFs"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPs-Jj-yCX">
-                                                        <rect key="frame" x="71" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="sHU-Js-ZSF"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-CX-66D">
-                                                        <rect key="frame" x="71" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="vZJ-03-qgY"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="135" id="UEi-Oo-2or"/>
-                                                    <constraint firstAttribute="height" constant="137" id="X6Q-Fs-Cj2"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6P-Dh-jvO">
-                                                <rect key="frame" x="187" y="20" width="135" height="137"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-WC-rL5">
-                                                        <rect key="frame" x="20" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="q9b-W1-tiU"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEg-w3-vei">
-                                                        <rect key="frame" x="20" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="F1y-Xe-xt5"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-Lg-Ekc">
-                                                        <rect key="frame" x="58" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="b5A-u4-9k4"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-kQ-aAN">
-                                                        <rect key="frame" x="58" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Epe-ox-oDn"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGv-7t-6Wq">
-                                                        <rect key="frame" x="20" y="20" width="95" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="135" id="mbO-Tu-1su"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGo-zr-NbS">
-                                                <rect key="frame" x="187" y="151" width="135" height="137"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-NX-kXM">
-                                                        <rect key="frame" x="20" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="SM0-xe-r9N"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL4-gs-jWP">
-                                                        <rect key="frame" x="20" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="sBp-I7-IYO"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfl-jj-Xax">
-                                                        <rect key="frame" x="58" y="49" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="+5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Orr-DX-8NQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjj-qi-YTG">
-                                                        <rect key="frame" x="58" y="87" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="-5"/>
-                                                        <connections>
-                                                            <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="tDa-jw-wQh"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 4: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axd-eW-ZB3">
-                                                        <rect key="frame" x="20" y="20" width="95" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="DWe-1e-pgc" firstAttribute="bottom" secondItem="xGo-zr-NbS" secondAttribute="bottom" id="Bad-ev-els"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="leading" secondItem="DWe-1e-pgc" secondAttribute="leading" id="Do6-Ue-PlJ"/>
-                                            <constraint firstItem="r6P-Dh-jvO" firstAttribute="leading" secondItem="DWe-1e-pgc" secondAttribute="trailing" constant="32" id="GNn-qG-KsD"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="trailing" secondItem="DWe-1e-pgc" secondAttribute="trailing" id="MTc-Ek-xdE"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="bottom" secondItem="r6P-Dh-jvO" secondAttribute="bottom" id="XvK-rU-0Ju"/>
-                                            <constraint firstItem="r6P-Dh-jvO" firstAttribute="trailing" secondItem="xGo-zr-NbS" secondAttribute="trailing" id="ZFg-LX-L6C"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="top" secondItem="qcC-Ki-PZz" secondAttribute="top" constant="20" id="bOi-3R-dEJ"/>
-                                            <constraint firstItem="r6P-Dh-jvO" firstAttribute="leading" secondItem="xGo-zr-NbS" secondAttribute="leading" id="d00-lt-n5b"/>
-                                            <constraint firstItem="DWe-1e-pgc" firstAttribute="top" secondItem="qcC-Ki-PZz" secondAttribute="top" constant="151" id="dtC-gA-3yA"/>
-                                            <constraint firstAttribute="bottom" secondItem="DWe-1e-pgc" secondAttribute="bottom" constant="20" id="ixw-y7-UuF"/>
-                                            <constraint firstItem="DWe-1e-pgc" firstAttribute="top" secondItem="xGo-zr-NbS" secondAttribute="top" id="rfz-mE-qaP"/>
-                                            <constraint firstAttribute="trailing" secondItem="r6P-Dh-jvO" secondAttribute="trailing" constant="20" id="vg3-bj-Eto"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="leading" secondItem="qcC-Ki-PZz" secondAttribute="leading" constant="20" id="xoG-PN-klX"/>
-                                            <constraint firstItem="PDa-RI-nEA" firstAttribute="top" secondItem="r6P-Dh-jvO" secondAttribute="top" id="y2I-PA-m88"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFz-fp-ANB">
-                                        <rect key="frame" x="64" y="552" width="214" height="61"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This should be hidden!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-gl-2tk">
-                                                <rect key="frame" x="20" y="20" width="174" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-B1-zhK">
+                                                <rect key="frame" x="20" y="20" width="95" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYG-wZ-TRd">
+                                                <rect key="frame" x="33" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="zxi-BX-lOL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-K7-XRv">
+                                                <rect key="frame" x="33" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Sao-ku-TFs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPs-Jj-yCX">
+                                                <rect key="frame" x="71" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="sHU-Js-ZSF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-CX-66D">
+                                                <rect key="frame" x="71" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="vZJ-03-qgY"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6P-Dh-jvO">
+                                        <rect key="frame" x="187" y="20" width="135" height="137"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGv-7t-6Wq">
+                                                <rect key="frame" x="20" y="20" width="95" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-WC-rL5">
+                                                <rect key="frame" x="33" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="q9b-W1-tiU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEg-w3-vei">
+                                                <rect key="frame" x="33" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="F1y-Xe-xt5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-Lg-Ekc">
+                                                <rect key="frame" x="71" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="b5A-u4-9k4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-kQ-aAN">
+                                                <rect key="frame" x="71" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Epe-ox-oDn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-1e-pgc">
+                                        <rect key="frame" x="20" y="151" width="135" height="137"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 3: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbL-F0-vRE">
+                                                <rect key="frame" x="20" y="20" width="95" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccb-Q0-qni">
+                                                <rect key="frame" x="33" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="s21-TF-zRk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31K-i7-6SS">
+                                                <rect key="frame" x="33" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="2Ph-bd-wWE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ub-kA-VPA">
+                                                <rect key="frame" x="71" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="d8V-3k-Md7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xid-S3-Yl1">
+                                                <rect key="frame" x="71" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Osu-ea-m9P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGo-zr-NbS">
+                                        <rect key="frame" x="187" y="151" width="135" height="137"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 4: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axd-eW-ZB3">
+                                                <rect key="frame" x="20" y="20" width="95" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-NX-kXM">
+                                                <rect key="frame" x="33" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="SM0-xe-r9N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL4-gs-jWP">
+                                                <rect key="frame" x="33" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="sBp-I7-IYO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfl-jj-Xax">
+                                                <rect key="frame" x="71" y="49" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="+5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="Orr-DX-8NQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjj-qi-YTG">
+                                                <rect key="frame" x="71" y="87" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="-5"/>
+                                                <connections>
+                                                    <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="tDa-jw-wQh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This should be hidden!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-gl-2tk">
+                                        <rect key="frame" x="81" y="287" width="181" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="trailing" secondItem="DWe-1e-pgc" secondAttribute="trailing" id="2Wj-N7-5mW"/>
+                                    <constraint firstAttribute="width" constant="342" id="916-Yc-LkX"/>
+                                    <constraint firstAttribute="bottom" secondItem="DWe-1e-pgc" secondAttribute="bottom" constant="56" id="9sq-h1-nF2"/>
+                                    <constraint firstAttribute="trailing" secondItem="r6P-Dh-jvO" secondAttribute="trailing" constant="20" id="C1v-hh-2ii"/>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="leading" secondItem="DWe-1e-pgc" secondAttribute="leading" id="GyC-rR-acr"/>
+                                    <constraint firstItem="DWe-1e-pgc" firstAttribute="bottom" secondItem="xGo-zr-NbS" secondAttribute="bottom" id="I9i-PV-ufY"/>
+                                    <constraint firstItem="r6P-Dh-jvO" firstAttribute="leading" secondItem="lye-QV-SCJ" secondAttribute="leading" constant="187" id="KU0-zh-XhQ"/>
+                                    <constraint firstItem="DWe-1e-pgc" firstAttribute="top" secondItem="xGo-zr-NbS" secondAttribute="top" id="RhA-fe-J1L"/>
+                                    <constraint firstItem="r6P-Dh-jvO" firstAttribute="leading" secondItem="DWe-1e-pgc" secondAttribute="trailing" constant="32" id="V2H-TV-Zcf"/>
+                                    <constraint firstItem="r6P-Dh-jvO" firstAttribute="trailing" secondItem="xGo-zr-NbS" secondAttribute="trailing" id="WUF-87-dmf"/>
+                                    <constraint firstItem="jxk-gl-2tk" firstAttribute="top" secondItem="lye-QV-SCJ" secondAttribute="bottom" constant="-21" id="a5Q-UW-uho"/>
+                                    <constraint firstItem="jxk-gl-2tk" firstAttribute="centerX" secondItem="lye-QV-SCJ" secondAttribute="centerX" id="cei-Yf-1AQ"/>
+                                    <constraint firstAttribute="height" constant="308" id="evb-XW-h7u"/>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="leading" secondItem="lye-QV-SCJ" secondAttribute="leading" constant="20" id="hUL-Rs-8wU"/>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="top" secondItem="lye-QV-SCJ" secondAttribute="top" constant="20" id="nTc-FU-XEo"/>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="top" secondItem="r6P-Dh-jvO" secondAttribute="top" id="nZV-hw-6dR"/>
+                                    <constraint firstItem="DWe-1e-pgc" firstAttribute="top" secondItem="lye-QV-SCJ" secondAttribute="top" constant="151" id="oBR-m9-rdF"/>
+                                    <constraint firstAttribute="bottom" secondItem="PDa-RI-nEA" secondAttribute="bottom" constant="187" id="tUV-XB-llX"/>
+                                    <constraint firstItem="r6P-Dh-jvO" firstAttribute="leading" secondItem="xGo-zr-NbS" secondAttribute="leading" id="v7L-Di-Ylw"/>
+                                    <constraint firstItem="PDa-RI-nEA" firstAttribute="bottom" secondItem="r6P-Dh-jvO" secondAttribute="bottom" id="yOJ-ny-rOh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lye-QV-SCJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2YA-zk-PqW"/>
+                            <constraint firstItem="lye-QV-SCJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLK-WF-7QM"/>
+                            <constraint firstItem="lye-QV-SCJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="fGc-Xr-xuk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lye-QV-SCJ" secondAttribute="trailing" constant="17" id="tdT-Uu-DAt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -259,25 +248,25 @@
                         <outlet property="player3Label" destination="BbL-F0-vRE" id="3OW-lz-L1a"/>
                         <outlet property="player4Label" destination="axd-eW-ZB3" id="7Ph-vf-gDM"/>
                         <outlet property="resultText" destination="jxk-gl-2tk" id="DiF-cL-J5t"/>
-                        <outletCollection property="player4Buttons" destination="gjj-qi-YTG" collectionClass="NSMutableArray" id="XWi-Hz-DOn"/>
-                        <outletCollection property="player3Buttons" destination="1Ub-kA-VPA" collectionClass="NSMutableArray" id="Er9-EG-0fM"/>
-                        <outletCollection property="player4Buttons" destination="gjj-qi-YTG" collectionClass="NSMutableArray" id="9ni-GP-2NM"/>
-                        <outletCollection property="player4Buttons" destination="dUy-NX-kXM" collectionClass="NSMutableArray" id="4Ar-Ap-liD"/>
-                        <outletCollection property="player3Buttons" destination="xid-S3-Yl1" collectionClass="NSMutableArray" id="vg2-zE-VVy"/>
-                        <outletCollection property="player2Buttons" destination="sgG-Lg-Ekc" collectionClass="NSMutableArray" id="weq-ao-pL0"/>
-                        <outletCollection property="player1Buttons" destination="BGz-CX-66D" collectionClass="NSMutableArray" id="aAC-fK-hje"/>
-                        <outletCollection property="player2Buttons" destination="ugs-kQ-aAN" collectionClass="NSMutableArray" id="M8y-Bg-Yd8"/>
                         <outletCollection property="player1Buttons" destination="OPs-Jj-yCX" collectionClass="NSMutableArray" id="dVP-Ou-xH4"/>
+                        <outletCollection property="player1Buttons" destination="Qdl-K7-XRv" collectionClass="NSMutableArray" id="b3L-iY-GKQ"/>
                         <outletCollection property="player1Buttons" destination="BGz-CX-66D" collectionClass="NSMutableArray" id="wWX-iM-wtz"/>
                         <outletCollection property="player1Buttons" destination="FYG-wZ-TRd" collectionClass="NSMutableArray" id="99Q-tf-TsZ"/>
+                        <outletCollection property="player1Buttons" destination="BGz-CX-66D" collectionClass="NSMutableArray" id="aAC-fK-hje"/>
+                        <outletCollection property="player2Buttons" destination="sgG-Lg-Ekc" collectionClass="NSMutableArray" id="XjH-Px-rBL"/>
                         <outletCollection property="player2Buttons" destination="KEg-w3-vei" collectionClass="NSMutableArray" id="iUc-J6-tcP"/>
-                        <outletCollection property="player4Buttons" destination="Mfl-jj-Xax" collectionClass="NSMutableArray" id="oVm-Ob-XR0"/>
+                        <outletCollection property="player2Buttons" destination="sgG-Lg-Ekc" collectionClass="NSMutableArray" id="weq-ao-pL0"/>
+                        <outletCollection property="player2Buttons" destination="ugs-kQ-aAN" collectionClass="NSMutableArray" id="M8y-Bg-Yd8"/>
                         <outletCollection property="player3Buttons" destination="1Ub-kA-VPA" collectionClass="NSMutableArray" id="VfZ-px-JpA"/>
                         <outletCollection property="player3Buttons" destination="Ccb-Q0-qni" collectionClass="NSMutableArray" id="3Lx-1r-6Xw"/>
+                        <outletCollection property="player3Buttons" destination="1Ub-kA-VPA" collectionClass="NSMutableArray" id="Er9-EG-0fM"/>
                         <outletCollection property="player3Buttons" destination="31K-i7-6SS" collectionClass="NSMutableArray" id="lRk-Ih-kE8"/>
-                        <outletCollection property="player1Buttons" destination="Qdl-K7-XRv" collectionClass="NSMutableArray" id="b3L-iY-GKQ"/>
-                        <outletCollection property="player2Buttons" destination="sgG-Lg-Ekc" collectionClass="NSMutableArray" id="XjH-Px-rBL"/>
+                        <outletCollection property="player3Buttons" destination="xid-S3-Yl1" collectionClass="NSMutableArray" id="vg2-zE-VVy"/>
+                        <outletCollection property="player4Buttons" destination="gjj-qi-YTG" collectionClass="NSMutableArray" id="XWi-Hz-DOn"/>
+                        <outletCollection property="player4Buttons" destination="Mfl-jj-Xax" collectionClass="NSMutableArray" id="oVm-Ob-XR0"/>
+                        <outletCollection property="player4Buttons" destination="gjj-qi-YTG" collectionClass="NSMutableArray" id="9ni-GP-2NM"/>
                         <outletCollection property="player4Buttons" destination="uL4-gs-jWP" collectionClass="NSMutableArray" id="yFQ-nl-lNr"/>
+                        <outletCollection property="player4Buttons" destination="dUy-NX-kXM" collectionClass="NSMutableArray" id="4Ar-Ap-liD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

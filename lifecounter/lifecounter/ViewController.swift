@@ -69,19 +69,6 @@ class ViewController: UIViewController {
         }
   }
   
-//  func modifyHealth(_ senderTag : Int) {
-//    if (senderTag == player1.tag) {
-//
-//    } else if (senderTag == player2.tag) {
-//
-//    } else if (senderTag == player3.tag) {
-//
-//    } else if(senderTag == player4.tag) {
-//
-//    }
-//
-//  }
-  
   func modifyHealth(_ sender : UIButton, _ playerHealth : Int) -> Int {
     if let text = sender.titleLabel?.text {
       if(text == "+") {
