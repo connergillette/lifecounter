@@ -44,6 +44,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" title="+"/>
                                                     <connections>
+                                                        <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="d7P-Oa-bPj"/>
                                                         <action selector="buttonPressed:forEvent:" destination="W3I-aQ-Ycn" eventType="touchDown" id="Z5L-ED-Ig1"/>
                                                     </connections>
                                                 </button>
@@ -53,6 +54,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <state key="normal" title="-"/>
                                                     <connections>
+                                                        <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="jtn-Uc-wWB"/>
                                                         <action selector="buttonPressed:forEvent:" destination="W3I-aQ-Ycn" eventType="touchDown" id="X55-d2-nQz"/>
                                                     </connections>
                                                 </button>
@@ -63,6 +65,7 @@
                                                     <state key="normal" title="+5"/>
                                                     <connections>
                                                         <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="DPF-lA-9JT"/>
+                                                        <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="Lt8-bk-nQB"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xq-hZ-Ye6">
@@ -72,6 +75,7 @@
                                                     <state key="normal" title="-5"/>
                                                     <connections>
                                                         <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="A0R-dw-l8q"/>
+                                                        <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="fcg-fu-BZy"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: 20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-Lv-ia5">
@@ -93,12 +97,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fk-AO-GBi">
-                                <rect key="frame" x="136" y="832" width="143" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fk-AO-GBi">
+                                <rect key="frame" x="20" y="832" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Add Player"/>
                                 <connections>
                                     <action selector="addPlayer:" destination="ZtR-8L-cLI" eventType="touchDown" id="0eM-h2-LbV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-6M-9fI">
+                                <rect key="frame" x="299" y="832" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="openHistory:forEvent:" destination="KUy-u0-Fcd" eventType="touchUpInside" id="Rhd-uK-aIm"/>
+                                    <action selector="openHistory:forEvent:" destination="KUy-u0-Fcd" eventType="touchDown" id="jhk-6g-82H"/>
+                                    <segue destination="ms0-y3-gap" kind="show" identifier="History" id="HuF-WA-AeY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,26 +122,80 @@
                         <constraints>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="leading" secondItem="Jjn-2c-S45" secondAttribute="leading" id="4ul-fA-vsd"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="top" secondItem="a44-0a-jnh" secondAttribute="top" id="7Gk-g2-zUc"/>
-                            <constraint firstItem="2Fk-AO-GBi" firstAttribute="top" secondItem="Jjn-2c-S45" secondAttribute="top" constant="788" id="7Y4-Hn-eoB"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="top" secondItem="a44-0a-jnh" secondAttribute="top" id="9v6-n6-CEv"/>
-                            <constraint firstItem="Jjn-2c-S45" firstAttribute="trailing" secondItem="2Fk-AO-GBi" secondAttribute="trailing" constant="135" id="C26-Fs-cUr"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="trailing" secondItem="Jjn-2c-S45" secondAttribute="trailing" id="KTz-O9-Brt"/>
-                            <constraint firstItem="2Fk-AO-GBi" firstAttribute="bottom" secondItem="Jjn-2c-S45" secondAttribute="bottom" id="Pa6-5f-eTl"/>
                             <constraint firstAttribute="bottom" secondItem="owb-Fs-GBB" secondAttribute="bottom" id="TdA-8n-mtS"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="leading" secondItem="Jjn-2c-S45" secondAttribute="leading" id="Ymb-ly-BW1"/>
                             <constraint firstAttribute="bottom" secondItem="owb-Fs-GBB" secondAttribute="bottom" id="cDb-bJ-SIj"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="trailing" secondItem="Jjn-2c-S45" secondAttribute="trailing" id="nso-0g-oPB"/>
-                            <constraint firstItem="2Fk-AO-GBi" firstAttribute="leading" secondItem="Jjn-2c-S45" secondAttribute="leading" constant="136" id="tgO-Sr-YXO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjn-2c-S45"/>
                     </view>
                     <connections>
+                        <outlet property="addPlayerButton" destination="2Fk-AO-GBi" id="rsH-pi-edQ"/>
                         <outlet property="collection" destination="owb-Fs-GBB" id="lXk-30-wa1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqt-u8-qxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KUy-u0-Fcd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-726.08695652173924" y="91.071428571428569"/>
+            <point key="canvasLocation" x="-754" y="90"/>
+        </scene>
+        <!--LifeCounterHistory-->
+        <scene sceneID="J3P-oW-qmJ">
+            <objects>
+                <viewController title="LifeCounterHistory" id="ms0-y3-gap" customClass="LifeCounterHistory" customModule="LifeCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyL-cv-C1s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akx-1L-roi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="JzS-YO-8nF" customClass="HistoryItem" customModule="LifeCounter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JzS-YO-8nF" id="RNS-ye-bK9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player X lost Y health." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dp-6z-uy2">
+                                                    <rect key="frame" x="20" y="8" width="374" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="0dp-6z-uy2" id="d5g-mE-kzV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPf-aC-rTB">
+                                <rect key="frame" x="20" y="820" width="169" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Return to Game"/>
+                                <connections>
+                                    <segue destination="ZtR-8L-cLI" kind="show" id="yGm-Lf-4TC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aKa-tj-4bf"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="akx-1L-roi" id="QfD-rp-oa1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgo-V2-8SL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="90.401785714285708"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -370,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="97.098214285714278"/>
+            <point key="canvasLocation" x="854" y="91"/>
         </scene>
     </scenes>
 </document>

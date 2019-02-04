@@ -11,10 +11,40 @@ import UIKit
 class LifeCounterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate
 {
   var num_players = 2
+  var game_started = false
   var players : [Player] = []
   var history : [String] = []
   
-  @IBOutlet weak var collection: UICollectionView!
+  @IBOutlet var collection: UICollectionView!
+  
+  @IBOutlet var addPlayerButton: UIButton!
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch(segue.identifier) {
+    case "History":
+      let source = segue.source as! LifeCounterViewController
+      let destination = segue.destination as! LifeCounterHistory
+      destination.incomingHistory = self.history
+    default:
+      NSLog("Unkown segue identifier: \(segue.identifier!)")
+    }
+  }
+  
+  @IBAction func buttonPressed(_ sender: UIButton) {
+    if(addPlayerButton.isEnabled && !self.game_started) {
+      addPlayerButton.isEnabled = false
+      self.game_started = true
+    }
+    
+    for player in self.players {
+      if(sender == player.addOne) {
+        history.append("Player \(player.player_number) gained 1 health.");
+      } else if(sender == player.subtractOne) {
+        history.insert("Player \(player.player_number) lost 1 health.", at: 0)
+      }
+    }
+    print(self.history)
+  }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return num_players
@@ -24,7 +54,7 @@ class LifeCounterViewController: UIViewController, UICollectionViewDataSource, U
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Player
     cell.player_number = indexPath.item + 1
     cell.label.text = "Player " + String(cell.player_number) + ": " + String(cell.health)
-//    players.append(cell)
+    players.append(cell)
 //    print(players)
     return cell
   }
@@ -35,13 +65,16 @@ class LifeCounterViewController: UIViewController, UICollectionViewDataSource, U
     collection.delegate = self
     collection.dataSource = self
     // Do any additional setup after loading the view.
+    
+    print("view did load")
   }
   
   @IBAction func addPlayer(_ sender: Any) {
-    self.num_players += 1
-    collection.reloadData()
+    if(self.num_players < 8 && !self.game_started) {
+      self.num_players += 1
+      collection.reloadData()
+    }
   }
-  
   
   /*
    // MARK: - Navigation
@@ -55,18 +88,44 @@ class LifeCounterViewController: UIViewController, UICollectionViewDataSource, U
   
 }
 
+class LifeCounterHistory: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+  @IBOutlet weak var table: UITableView!
+  var history : [String] = []
+  var incomingHistory : [String]! = nil
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.history = incomingHistory
+    table.delegate = self
+    table.dataSource = self
+    print("history: \(self.history)")
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.history.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! HistoryItem
+    cell.labelText = history[indexPath.item]
+    cell.label.text = cell.labelText
+    cell.item_number = indexPath.item
+    return cell
+  }
+}
+
 class Player: UICollectionViewCell {
-  @IBOutlet weak var label: UILabel!
-  @IBOutlet weak var addOne: UIButton!
-  @IBOutlet weak var subtractOne: UIButton!
-  @IBOutlet weak var addX: UIButton!
-  @IBOutlet weak var subtractX: UIButton!
+  @IBOutlet var label: UILabel!
+  @IBOutlet var addOne: UIButton!
+  @IBOutlet var subtractOne: UIButton!
+  @IBOutlet var addX: UIButton!
+  @IBOutlet var subtractX: UIButton!
   
   var health : Int = 20
   var player_number : Int = 0
-  
+
   @IBAction func buttonPressed(_ sender: UIButton, forEvent event: UIEvent) {
-    print("button pressed " + String(player_number));
     switch(sender) {
     case addOne:
       addOneHealth()
@@ -98,4 +157,10 @@ class Player: UICollectionViewCell {
   func subtractHealth() {
     
   }
+}
+
+class HistoryItem: UITableViewCell {
+  @IBOutlet weak var label: UILabel!
+  var item_number : Int = 0
+  var labelText : String = ""
 }
