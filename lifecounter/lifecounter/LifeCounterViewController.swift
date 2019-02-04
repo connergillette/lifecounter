@@ -41,9 +41,12 @@ class LifeCounterViewController: UIViewController, UICollectionViewDataSource, U
         history.append("Player \(player.player_number) gained 1 health.");
       } else if(sender == player.subtractOne) {
         history.insert("Player \(player.player_number) lost 1 health.", at: 0)
+      } else if(sender == player.addX) {
+        history.insert("Player \(player.player_number) gained \(player.custom_value) health.", at: 0)
+      } else if(sender == player.subtractX) {
+        history.insert("Player \(player.player_number) lost \(player.custom_value) health.", at: 0)
       }
     }
-    print(self.history)
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -122,22 +125,54 @@ class Player: UICollectionViewCell {
   @IBOutlet var addX: UIButton!
   @IBOutlet var subtractX: UIButton!
   
+  @IBOutlet weak var numberField: UITextField!
+  
   var health : Int = 20
   var player_number : Int = 0
+  var custom_value : Int = 5
 
   @IBAction func buttonPressed(_ sender: UIButton, forEvent event: UIEvent) {
     switch(sender) {
     case addOne:
       addOneHealth()
+      break
     case subtractOne:
       subtractOneHealth()
+      break
+    case addX:
+      addHealth()
+      break
+    case subtractX:
+      subtractHealth()
+      break
     default:
       break;
     }
   }
   
   func setLabel() {
-    self.label.text = "Player \(player_number): \(health)"
+    self.label.text = "Player \(self.player_number): \(self.health)"
+  }
+  
+  @IBAction func numberChanged(_ sender: UITextField) {
+    print("number changed")
+    if sender.text != nil {
+      addX.setTitle("+" + sender.text!, for: .normal)
+      subtractX.setTitle("-" + sender.text!, for: .normal)
+      
+      self.custom_value = Int(sender.text!)!
+    }
+  }
+  @IBAction func editingDidEnd(_ sender: UITextField) {
+   
+    print("editing did end")
+    if sender.text != nil {
+       self.numberField.resignFirstResponder()
+      addX.setTitle("+" + sender.text!, for: .normal)
+      subtractX.setTitle("-" + sender.text!, for: .normal)
+      
+      self.custom_value = Int(sender.text!)!
+    }
   }
   
   func addOneHealth() {
@@ -146,7 +181,8 @@ class Player: UICollectionViewCell {
   }
   
   func addHealth() {
-    
+    self.health += self.custom_value
+    setLabel()
   }
   
   func subtractOneHealth() {
@@ -155,7 +191,8 @@ class Player: UICollectionViewCell {
   }
   
   func subtractHealth() {
-    
+    self.health -= self.custom_value
+    setLabel()
   }
 }
 

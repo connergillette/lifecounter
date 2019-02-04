@@ -66,6 +66,7 @@
                                                     <connections>
                                                         <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="DPF-lA-9JT"/>
                                                         <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="Lt8-bk-nQB"/>
+                                                        <action selector="buttonPressed:forEvent:" destination="W3I-aQ-Ycn" eventType="touchDown" id="od9-2X-RRf"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xq-hZ-Ye6">
@@ -76,6 +77,7 @@
                                                     <connections>
                                                         <action selector="buttonClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchDown" id="A0R-dw-l8q"/>
                                                         <action selector="buttonPressed:" destination="ZtR-8L-cLI" eventType="touchDown" id="fcg-fu-BZy"/>
+                                                        <action selector="buttonPressed:forEvent:" destination="W3I-aQ-Ycn" eventType="touchDown" id="tsR-Aq-vjv"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: 20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kf-Lv-ia5">
@@ -85,36 +87,49 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-Cu-QjF">
+                                                    <rect key="frame" x="66" y="90" width="67" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="editingDidEnd:" destination="W3I-aQ-Ycn" eventType="primaryActionTriggered" id="6EX-iq-uIU"/>
+                                                        <action selector="editingDidEnd:" destination="W3I-aQ-Ycn" eventType="touchUpOutside" id="zlU-6z-P9I"/>
+                                                        <action selector="numberChanged:" destination="W3I-aQ-Ycn" eventType="valueChanged" id="lAG-wd-XFk"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="addOne" destination="Emb-9x-A7S" id="28A-fj-tkh"/>
                                             <outlet property="addX" destination="0YF-PV-skL" id="3Ma-Q2-D8o"/>
                                             <outlet property="label" destination="1Kf-Lv-ia5" id="wmZ-3m-amF"/>
+                                            <outlet property="numberField" destination="zCm-Cu-QjF" id="tf9-g2-9Qk"/>
                                             <outlet property="subtractOne" destination="ArI-3C-m4T" id="JRy-FO-s2l"/>
                                             <outlet property="subtractX" destination="4Xq-hZ-Ye6" id="pTs-fB-JyO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fk-AO-GBi">
-                                <rect key="frame" x="20" y="832" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fk-AO-GBi">
+                                <rect key="frame" x="20" y="820" width="117" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Add Player"/>
                                 <connections>
                                     <action selector="addPlayer:" destination="ZtR-8L-cLI" eventType="touchDown" id="0eM-h2-LbV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-6M-9fI">
-                                <rect key="frame" x="299" y="832" width="95" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-6M-9fI">
+                                <rect key="frame" x="317" y="820" width="77" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <action selector="openHistory:forEvent:" destination="KUy-u0-Fcd" eventType="touchUpInside" id="Rhd-uK-aIm"/>
                                     <action selector="openHistory:forEvent:" destination="KUy-u0-Fcd" eventType="touchDown" id="jhk-6g-82H"/>
-                                    <segue destination="ms0-y3-gap" kind="show" identifier="History" id="HuF-WA-AeY"/>
+                                    <segue destination="ms0-y3-gap" kind="popoverPresentation" identifier="History" popoverAnchorView="nXN-6M-9fI" id="HuF-WA-AeY">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,10 +139,16 @@
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="top" secondItem="a44-0a-jnh" secondAttribute="top" id="7Gk-g2-zUc"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="top" secondItem="a44-0a-jnh" secondAttribute="top" id="9v6-n6-CEv"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="trailing" secondItem="Jjn-2c-S45" secondAttribute="trailing" id="KTz-O9-Brt"/>
+                            <constraint firstItem="2Fk-AO-GBi" firstAttribute="bottom" secondItem="Jjn-2c-S45" secondAttribute="bottom" id="PY0-Ya-Whi"/>
+                            <constraint firstItem="nXN-6M-9fI" firstAttribute="leading" secondItem="2Fk-AO-GBi" secondAttribute="trailing" constant="180" id="Psg-sd-1VF"/>
+                            <constraint firstItem="Jjn-2c-S45" firstAttribute="trailing" secondItem="nXN-6M-9fI" secondAttribute="trailing" constant="20" id="RX3-pd-e09"/>
+                            <constraint firstItem="nXN-6M-9fI" firstAttribute="bottom" secondItem="Jjn-2c-S45" secondAttribute="bottom" id="S6v-02-Dd2"/>
                             <constraint firstAttribute="bottom" secondItem="owb-Fs-GBB" secondAttribute="bottom" id="TdA-8n-mtS"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="leading" secondItem="Jjn-2c-S45" secondAttribute="leading" id="Ymb-ly-BW1"/>
                             <constraint firstAttribute="bottom" secondItem="owb-Fs-GBB" secondAttribute="bottom" id="cDb-bJ-SIj"/>
+                            <constraint firstItem="nXN-6M-9fI" firstAttribute="leading" secondItem="2Fk-AO-GBi" secondAttribute="trailing" constant="180" id="iPy-LU-0FI"/>
                             <constraint firstItem="owb-Fs-GBB" firstAttribute="trailing" secondItem="Jjn-2c-S45" secondAttribute="trailing" id="nso-0g-oPB"/>
+                            <constraint firstItem="2Fk-AO-GBi" firstAttribute="leading" secondItem="Jjn-2c-S45" secondAttribute="leading" constant="20" id="ph1-ed-aw4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjn-2c-S45"/>
                     </view>
@@ -139,7 +160,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqt-u8-qxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KUy-u0-Fcd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-754" y="90"/>
+            <point key="canvasLocation" x="-755.07246376811599" y="89.732142857142847"/>
         </scene>
         <!--LifeCounterHistory-->
         <scene sceneID="J3P-oW-qmJ">
